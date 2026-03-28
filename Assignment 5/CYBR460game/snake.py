@@ -64,11 +64,7 @@ while running:
         head[0] += 10
 
     snake.insert(0, head)
-    if (
-        head[0] < 0 or head[0] >= WIDTH or
-        head[1] < 0 or head[1] >= HEIGHT or
-        head in snake[1:]
-    ):
+    if (head[0] < 0 or head[0] >= WIDTH or head[1] < 0 or head[1] >= HEIGHT or head in snake[1:]):
         running = False
     # Eat food
     if head == food:
